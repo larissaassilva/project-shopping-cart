@@ -31,8 +31,17 @@ const removeEle = async () => {
   secProduc.removeChild(remove);
 };
 
+const mensErro = () => {
+  const elementError = document.createElement('span');
+  elementError.innerText = 'Algum erro ocorreu, recarregue a página e tente novamente';
+  elementError.className = 'error';
+  secProduc.appendChild(elementError);
+};
+
 Promise.all([
   addCarregando(),
 ]).then(() => {
   removeEle();
+}).catch(() => {
+  mensErro();
 });
