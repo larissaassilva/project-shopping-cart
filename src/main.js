@@ -14,3 +14,25 @@ const addChild = async () => {
 };
 
 addChild();
+
+const secProduc = document.querySelector('.products');
+
+const addCarregando = async () => {
+  const newEle = document.createElement('span');
+  newEle.className = 'loading';
+  newEle.innerText = 'carregando...';
+  secProduc.appendChild(newEle);
+  const response = await fetch('https://api.mercadolibre.com/sites/MLB/search?q=computador');
+  return response;
+};
+
+const removeEle = async () => {
+  const remove = document.querySelector('.loading');
+  secProduc.removeChild(remove);
+};
+
+Promise.all([
+  addCarregando(),
+]).then(() => {
+  removeEle();
+});
