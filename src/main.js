@@ -48,18 +48,7 @@ Promise.all([
 });
 
 const resultLocal = getSavedCartIDs();
-// resultLoca.map(async (id) => {
-//   await fetchProduct(id);
-// });
 
-// Promise.all([
-//   resultLoca.map(async (id) => {
-//     const retur = await fetchProduct(id);
-//     createCartProductElement(retur);
-//     const ol = document.querySelector('.cart__products');
-//     ol.appendChild(product);
-//   }),
-// ]);
 const local = () => {
   resultLocal.forEach(async (id) => {
     const products = await fetchProduct(id);
