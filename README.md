@@ -1,3 +1,4 @@
+# Boas-vindas ao repositório do projeto Carrinho de Compras
 # Requisitos Obrigatórios
 
 ## 1. (TDD) Desenvolva testes de no mínimo 50% de cobertura das funções e linhas do arquivo `fetchFunctions`
